@@ -1,22 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main() {
-    //definiamo il grafo;
+
+    //to implement a BFS we need to define a graph using an adjacenty list
     int N, M; cin >> N >> M;
     vector<vector<int>> adjlist(N);
-    //eseguiamo la BFS
+
+    //you use a queue to track the nodes you must visit, and a vector to track the ones you have already visited
     queue<int> Q;
-    vector<bool> visto(N);
-    int starting; Q.push(starting);
+    vector<bool> visited(N);
+    int starting; Q.push(starting); /here you choose the starting node
     while (!Q.empty()) {
-        int s = Q.front(); Q.pop();
-        //processare
+        int s = Q.front(); Q.pop(); 
+        //you exctract the first node and process it (if you need)
         for (int i:adjlist[s]) {
-            if (visto[i]) continue;
-            //si può aggiungere la distanza.
-            Q.push(i);
+            if (visited[i]) continue;
+            visited[I] = true;
+            //you can also get the distance from the starting node if all the arches have the same weight
+            Q.push(i); 
         }
     }
     return 0;
