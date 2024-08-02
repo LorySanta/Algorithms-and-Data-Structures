@@ -1,12 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main() {
-    //indichiamo prima il numero di nodi e di archi
-    int N; cin >> N;
-    int M; cin >> M;
-
+    //To implement a graph we need two informations: the number of nodes (N) and the number of arches (M)
+    int N, M; cin >> N >> M;
 
     //si possono rappresentare in 3 modi, 1° è la lista di adiacenza
     vector<vector<pair<int,int>>> adj(N);
