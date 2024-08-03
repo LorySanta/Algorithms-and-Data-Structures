@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//BFS is an algorithm used to explore a graph, reaching every node ordered from the nearest to  the starting node to the furthest 
+
 int main() {
 
     //to implement a BFS we need to define a graph using an adjacenty list
